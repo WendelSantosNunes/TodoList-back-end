@@ -22,10 +22,10 @@ Este projeto é um back-end de uma aplicação de lista de tarefas (to-do list) 
 
 ## 💻 Funcionalidades
  
-- [x] Criar um usuário, onde cada um pode:
-  - [x] Visualizar as suas tarefas;
-  - [x] Atualizar suas tarefas.
-  - [x] Adicionar novas tarefas;
+- [x] Criar um usuário com as seguintes permissões:
+  - [x] Visualizar suas tarefas;
+  - [x] Atualizar suas tarefas;
+  - [x] Adicionar novas tarefas.
 
 ---
 
