@@ -135,7 +135,7 @@ Ter feito a configuração do ambiente.
 Clicar em run no arquivo arquivo src/main/java/br/com/wendel/todolist/TodoListApplication.java
 
 <p align="center">
-  <img alt="Imagem do Portfólio" title="#Portfólio" src="../todolist/images/Execucao.png" />
+  <img alt="Imagem do Portfólio" title="#Portfólio" src="./images/Execucao.png" />
 </p>
 
 ---
