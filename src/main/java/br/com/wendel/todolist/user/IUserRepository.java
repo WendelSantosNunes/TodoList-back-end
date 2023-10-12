@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 
 public interface IUserRepository extends JpaRepository<UserModel, UUID>{
-  // Verificando se já existe esse username
   UserModel findByUsername(String username);
   
 }

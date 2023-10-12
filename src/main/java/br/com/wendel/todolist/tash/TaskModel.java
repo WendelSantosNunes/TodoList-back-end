@@ -19,7 +19,6 @@ public class TaskModel {
   private UUID id;
 
   private String description;
-  // Limitar a quantidade de caracteres
   @Column(length = 50)
   private String title;
   private LocalDateTime startAt;

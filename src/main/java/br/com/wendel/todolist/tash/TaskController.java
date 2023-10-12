@@ -26,17 +26,13 @@ public class TaskController {
 
   @PostMapping("/")
   public ResponseEntity create(@RequestBody TaskModel taskModel, HttpServletRequest request) {
-    // Recuperado/Pegando o id a partir da request e adicionar no taskModel
     taskModel.setIdUser((UUID)request.getAttribute("idUser"));
 
-    // Data e tempo atual
     var currentDate = LocalDateTime.now();
    
-    // Data atual maior que a data de início e fim da tarefa
     if(currentDate.isAfter(taskModel.getStartAt()) || currentDate.isAfter(taskModel.getEndAt())){
       return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("A data de início / data de términio deve ser maior do que a data atual");
     }
-    // Data início tem que ser menor do que a data de fim da tarefa
     if(taskModel.getStartAt().isAfter(taskModel.getEndAt())){
       return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("A data de início deve ser menor do que a data de término");
     }
@@ -48,7 +44,6 @@ public class TaskController {
   
   @GetMapping("/")
   public List<TaskModel> list(HttpServletRequest request){
-    // Criamos esse método no ITaskRepository  
     var tasks = this.taskRepository.findByIdUser((UUID)request.getAttribute("idUser"));
 
     return tasks;

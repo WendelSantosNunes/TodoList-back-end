@@ -12,17 +12,17 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 @Data
-@Entity(name = "tb_users") // Nomeado a tabela no banco de dados
+@Entity(name = "tb_users")
 public class UserModel {
-  @Id // Estamos informando para banco que essa é a chave primária
-  @GeneratedValue(generator = "UUID") // Gerar o valor automanticamente
-  private UUID id; // Chave primária
+  @Id 
+  @GeneratedValue(generator = "UUID") 
+  private UUID id;
 
   @Column(unique = true)
   private String username;
   private String name;
   private String password;
 
-  @CreationTimestamp // Data de quando foi criando o dado no banco
+  @CreationTimestamp 
   private LocalDateTime createdAt;
 }
